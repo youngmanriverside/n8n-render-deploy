@@ -15,17 +15,14 @@ services:
       - key: N8N_PROTOCOL
         value: https
       - key: WEBHOOK_URL
-        sync: false
         generateValue: true
       - key: N8N_BASIC_AUTH_ACTIVE
         value: true
       - key: N8N_BASIC_AUTH_USER
-        sync: false
+        value: admin
       - key: N8N_BASIC_AUTH_PASSWORD
-        sync: false
         generateValue: true
       - key: N8N_ENCRYPTION_KEY
-        sync: false
         generateValue: true
       - key: DB_TYPE
         value: postgresdb
