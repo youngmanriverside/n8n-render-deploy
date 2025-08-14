@@ -50,4 +50,4 @@ services:
 databases:
   - name: n8n-postgres
     databaseName: n8n
-    plan: starter
+    plan: free
