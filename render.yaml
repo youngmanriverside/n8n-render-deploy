@@ -19,11 +19,11 @@ services:
       - key: N8N_BASIC_AUTH_ACTIVE
         value: true
       - key: N8N_BASIC_AUTH_USER
-        value: admin  # 可保留，但建議自訂
+        value: admin
       - key: N8N_BASIC_AUTH_PASSWORD
-        generateValue: true  # 移除硬編碼密碼
+        generateValue: true
       - key: N8N_ENCRYPTION_KEY
-        generateValue: true  # 移除硬編碼密鑰
+        generateValue: true
       - key: DB_TYPE
         value: postgresdb
       - key: DB_POSTGRESDB_HOST
