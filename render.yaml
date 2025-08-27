@@ -11,7 +11,7 @@ services:
       - key: N8N_HOST
         value: 0.0.0.0
       - key: N8N_PORT
-        value: $PORT  # 使用 Render 動態端口
+        value: $PORT
       - key: N8N_PROTOCOL
         value: https
       - key: WEBHOOK_URL
@@ -19,11 +19,11 @@ services:
       - key: N8N_BASIC_AUTH_ACTIVE
         value: true
       - key: N8N_BASIC_AUTH_USER
-        value: admin
+        value: admin  # 可保留，但建議自訂
       - key: N8N_BASIC_AUTH_PASSWORD
-        value: MySecurePass123  # 自訂強密碼
+        generateValue: true  # 移除硬編碼密碼
       - key: N8N_ENCRYPTION_KEY
-        generateValue: true
+        generateValue: true  # 移除硬編碼密鑰
       - key: DB_TYPE
         value: postgresdb
       - key: DB_POSTGRESDB_HOST
@@ -54,7 +54,6 @@ services:
         value: true
       - key: N8N_USER_MANAGEMENT_ENABLED
         value: false
-    disks: []  # 無需 Disk，依賴 PostgreSQL
 databases:
   - name: n8n-postgres
     databaseName: n8n
